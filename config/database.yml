@@ -49,7 +49,9 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: textile_editor_examples_production
+  host: ENV['TEH_HOST']
+  database: ENV['TEH_DATABASE']
   pool: 5
-  username: katz
-  password:
+  username:	ENV['TEH_USER']
+  password: ENV['TEH_PASSWORD']
+  port: ENV['TEH_PORT']
