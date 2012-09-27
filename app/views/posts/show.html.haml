@@ -5,7 +5,7 @@
   = @post.title
 %p
   %b Body:
-  = @post.body
+  = to_html(@post.body)
 
 = link_to 'Edit', edit_post_path(@post)
 \|

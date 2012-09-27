@@ -13,6 +13,9 @@ gem 'kaminari', '>= 0.13.0'
 gem 'textile_editor_helper', '~> 0.0.30'
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 
+gem 'RedCloth'
+gem 'htmlentities'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
