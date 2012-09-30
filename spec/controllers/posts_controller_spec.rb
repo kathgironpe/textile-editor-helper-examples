@@ -24,7 +24,7 @@ describe PostsController do
   # Post. As you add validations to Post, be sure to
   # update the return value of this method accordingly.
   def valid_attributes
-    { title: "Test Post", body: "Test Body"}
+    { title: "Test Post", body: "Test Body" }
   end
 
   # This should return the minimal set of values that should be in the session
@@ -32,6 +32,11 @@ describe PostsController do
   # PostsController. Be sure to keep this updated too.
   def valid_session
     {}
+  end
+
+  let(:user) { FactoryGirl.create(:user) }
+  before do
+    login_user(user)
   end
 
   describe "GET index" do

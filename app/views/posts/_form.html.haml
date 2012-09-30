@@ -1,10 +1,9 @@
-.clearfix
 = simple_form_for(@post) do |f|
   = f.error_notification
 
   .form-inputs
     = f.input :title
-    = f.input :body, :as => :textile_editor
+    = f.input :body, as: :textile_editor
 
   .form-actions
     = f.button :submit

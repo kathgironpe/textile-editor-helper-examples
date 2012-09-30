@@ -1,7 +1,8 @@
 class PostsController < ApplicationController
 
-  respond_to :html, :json
+  respond_to :html
 
+  before_filter :require_login, :only => [:edit, :update, :destroy]
   before_filter :find_post, :only => [:show, :edit, :update, :destroy]
 
   def index

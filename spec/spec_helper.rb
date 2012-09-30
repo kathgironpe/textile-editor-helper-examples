@@ -44,9 +44,7 @@ Spork.prefork do
       DatabaseCleaner.clean
     end
 
+    config.include Sorcery::TestHelpers::Rails
   end
 
-
-
 end
-
