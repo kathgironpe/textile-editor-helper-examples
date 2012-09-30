@@ -17,7 +17,6 @@
     %link(href="images/apple-touch-icon.png" rel="apple-touch-icon-precomposed")
     %link(href="images/favicon.ico" rel="shortcut icon")
 
-
   %body
     .navbar.navbar-fixed-top
       .navbar-inner
@@ -25,8 +24,8 @@
           %a.btn.btn-navbar(data-target=".nav-collapse" data-toggle="collapse")
             %span.icon-bar
             %span.icon-bar
-            %span.icon-bar
-          %a.brand(href="#") Textile Editor Helper Examples
+              %span.icon-bar
+          = link_to "Textile Editor Helper Examples", root_url, class: "brand"
           .container.nav-collapse
             %ul.nav
               %li= link_to "Simple Form Example", new_post_path
