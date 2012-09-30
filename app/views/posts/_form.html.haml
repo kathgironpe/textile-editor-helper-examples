@@ -1,12 +1,18 @@
 = simple_form_for(@post) do |f|
   = f.error_notification
 
+  - if params[:preview]
+    .preview
+      %h2= params[:post][:title]
+      = to_html(params[:post][:body])
+
   .form-inputs
     = f.input :title
     = f.input :body, as: :textile_editor
 
   .form-actions
     = f.button :submit
+    = f.submit 'Preview', class: 'btn', name: 'preview'
 
 - content_for :javascript do
   = textile_editor_initialize

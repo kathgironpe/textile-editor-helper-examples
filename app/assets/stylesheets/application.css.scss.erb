@@ -13,10 +13,23 @@
  *= require_self
  */
 
+@mixin border-radius($radius: 1px) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+
 textarea {
   width: 99%!important;
 }
 
 .adjust {
   margin-top: 80px;
+}
+
+.preview {
+  @include border-radius(10px);
+  background: #eee;
+  padding: 10px 5px!important;
 }

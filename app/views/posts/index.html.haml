@@ -4,10 +4,9 @@
   %h2= post.title
   %p= to_html(post.body)
   %p
-    %ul
-      %li.btn= link_to 'Show', post
-      %li.btn= link_to 'Edit', edit_post_path(post)
-      %li.btn= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }
+    %span.btn= link_to content_tag('i', '', class: 'icon-file') + 'Show', post
+    %span.btn= link_to content_tag('i', '', class: 'icon-pencil') +' Edit', edit_post_path(post)
+    %span.btn= link_to content_tag('i', '', class: 'icon-trash') + ' Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }
 
 %br/
 

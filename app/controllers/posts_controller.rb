@@ -21,7 +21,8 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(params[:post])
-    if @post.save
+
+    if !params[:preview] and @post.save
       flash[:notice] = "The post was successfully created."
       respond_with @post
     else
@@ -30,7 +31,7 @@ class PostsController < ApplicationController
   end
 
   def update
-    if @post.update_attributes(params[:post])
+    if !params[:preview] and @post.update_attributes(params[:post])
       flash[:notice] = "The post was successfully updated."
       respond_with @post
     else
